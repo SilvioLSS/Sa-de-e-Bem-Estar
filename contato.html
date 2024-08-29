@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1 class="titulo">SEU GUIA COMPLETO PARA SAÚDE E BEM-ESTAR</h1>
+            <p class="contato">
+                <img src="img/email.png" alt="Ícone de email" width="20px"> 
+                <a href="mailto:silvio.luiz@ifsp.aluno.edu.br">silvio.luiz@ifsp.aluno.edu.br</a> 
+                <br>
+                <img src="img/whatsapp.png" alt="Ícone de WhatsApp" width="20px"> 
+                (16)997526019
+            </p>
+        </header>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html" accesskey="1">Home</a></li>
+                <li><a href="nutricao.html" accesskey="2">Nutrição</a></li>
+                <li><a href="exercicioefitness.html" accesskey="3" aria-current="page">Exercícios e Fitness</a></li>
+                <li><a href="saudemental.html" accesskey="4">Saúde Mental</a></li>
+                <li><a href="sonoedescanso.html" accesskey="5">Sono e Descanso</a></li>
+                <li><a href="prevencaoecuidados.html" accesskey="6">Prevenção e Cuidados</a></li>
+                <li><a href="bemestarnotrabalho.html" accesskey="7">Bem-Estar no Trabalho</a></li>
+                <li><a href="bemestarsocial.html" accesskey="8">Bem-Estar Social</a></li>
+                <li><a href="saudesexual.html" accesskey="9">Saúde Sexual</a></li>
+                <li><a href="terceiraidade.html" accesskey="0">Terceira Idade</a></li>
+                <li><a href="saudeinfantil.html" accesskey="a">Saúde Infantil</a></li>
+                <li><a href="contato.html" accesskey="b">Contato</a></li>
+            </ul>
+        </nav> 
+        <main>
+            <form action="processa_formulario.php" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required aria-required="true">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{5}-\d{4}">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferências de Contato</legend>
+
+                    <label for="contato-preferencia">Como prefere ser contatado:</label>
+                    <select id="contato-preferencia" name="contato-preferencia" required aria-required="true">
+                        <option value="email">Email</option>
+                        <option value="telefone">Telefone</option>
+                        <option value="sms">SMS</option>
+                    </select>
+
+                    <label for="receber-notificacoes">Deseja receber notificações?</label>
+                    <input type="checkbox" id="receber-notificacoes" name="receber-notificacoes" value="sim">
+
+                    <fieldset>
+                        <legend>Escolha o tipo de contato</legend>
+                        <label for="tipo-contato-1">
+                            <input type="radio" id="tipo-contato-1" name="tipo-contato" value="suporte" checked>
+                            Suporte
+                        </label>
+                        <label for="tipo-contato-2">
+                            <input type="radio" id="tipo-contato-2" name="tipo-contato" value="vendas">
+                            Vendas
+                        </label>
+                        <label for="tipo-contato-3">
+                            <input type="radio" id="tipo-contato-3" name="tipo-contato" value="geral">
+                            Geral
+                        </label>
+                    </fieldset>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Upload de Arquivos</legend>
+
+                    <label for="anexo">Enviar arquivo:</label>
+                    <input type="file" id="anexo" name="anexo[]" accept=".jpg, .jpeg, .png, .pdf" multiple aria-describedby="arquivo-ajuda">
+                    <span id="arquivo-ajuda" class="sr-only">Você pode enviar arquivos JPEG, PNG e PDF.</span>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Seu Guia Completo para Saúde e Bem-Estar</p>
+        </footer>
+    </div>
+</body>
+</html>

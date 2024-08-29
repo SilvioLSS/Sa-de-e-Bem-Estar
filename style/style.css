@@ -1,0 +1,139 @@
+:root {
+    --cor-principal: #95FED2;
+    --cor-secundaria: #E4FFF4;
+    --cor-terciaria: #CAFFE9;
+    --cor-texto: black;
+    --cor-sombra: #4caf85;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--cor-principal);
+    text-align: center;
+    color: var(--cor-texto);
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px var(--cor-sombra);
+}
+
+.titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.contato {
+    text-align: right;
+}
+
+.subtitulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+p {
+    font-size: large;
+}
+
+#container {
+    background-color: var(--cor-secundaria);
+}
+
+nav {
+    background-color: var(--cor-principal);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 5px 5px 5px 5px var(--cor-sombra);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #CAFFE9;
+}
+
+nav ul li {
+    color: #CAFFE9;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor-secundaria);
+    color: black;
+    box-shadow: 5px 5px 5px 5px var(--cor-sombra);
+}
+
+nav ul li a:focus {
+    outline: 2px solid var(--cor-sombra);
+    outline-offset: 4px;
+}
+
+main {
+    padding: 20px;
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    color: var(--cor-texto);
+    box-shadow: 5px 5px 5px 5px var(--cor-sombra);
+}
+
+main img{
+    width: 100%;
+}
+
+.lista {
+    text-align: left;
+    font-size: large;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    text-align: center;
+    color: var(--cor-texto);
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px var(--cor-sombra);
+}
+
+@media (min-width: 769px) {
+    #conteudo {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav {
+        height: 420px;
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+    .lista {
+        font-size: large;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main img{
+        width: 50%;
+    }
+    
+    .titulo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: xx-large;
+    }
+
+}
